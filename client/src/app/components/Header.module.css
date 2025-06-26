@@ -1,0 +1,37 @@
+
+.navItem:hover{
+  color: var(--hookers-green);
+  scale: 1.05;
+}
+
+.navItem:active{
+  color: var(--hookers-green);
+  scale: 1.05;
+}
+
+.navItem{
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 500ms;
+  transition-property: color, scale;
+}
+
+/* Underline Animation */
+.navItem::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  background-color: var(--hookers-green);
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+.navItem:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
