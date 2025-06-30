@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import styles from "./Header.module.css";
+import LogoImage from 'public/light-temp-logo.png';
 
 const pages: string[] = [
   "Home",
@@ -12,7 +13,7 @@ const pages: string[] = [
 
 const navItems = pages.map((item) => (
   <li className={styles.navItem} key={item}>
-    <a href="">{item}</a>
+    <a href="#">{item}</a>
   </li>
 ));
 
@@ -20,10 +21,9 @@ export default function Header() {
   return (
     <header className="h-[80px] bg-[var(--dark-slate-gray)] p-4 shadow-md">
       <div className="navbar flex flex-[1_1_auto] justify-between h-full mx-10 items-center">
-        <a className="logo">
+        <a className="logo" href="#">
           <Image
-            src="@/../public/vercel/globe.svg"
-            width={50}
+            src={LogoImage}
             height={50}
             alt="Logo"
           ></Image>
