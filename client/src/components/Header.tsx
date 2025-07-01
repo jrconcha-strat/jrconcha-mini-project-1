@@ -23,7 +23,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="h-[80px] bg-[var(--background)] filter brightness-115 p-4 shadow-md">
+    <header className="h-[80px] bg-[var(--background)] filter brightness-115 p-4 shadow-md sticky top-0 z-50">
       <div className="navbar flex flex-[1_1_auto] justify-between h-full mx-10 items-center">
         <Link className="logo" href={{ pathname: "/" }}>
           <Image
