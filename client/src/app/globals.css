@@ -4,11 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* --background:  #ffffff;
-  --foreground: #171717;  */
+  --background:  rgb(245, 245, 245);
+  --foreground: rgb(32, 33, 36); 
 
-  --background: var(--ash-gray);
-  --foreground: var(--charcoal);
+  /* --background: var(--ash-gray);
+  --foreground: var(--charcoal); */
 
   --ash-gray: #cad2c5ff;
   --cambridge-blue: #84a98cff;
@@ -91,10 +91,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: var(--charcoal);
-  --foreground: var(--ash-gray);
+  /* --background: var(--charcoal);
+  --foreground: var(--ash-gray); */
   /* --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0); */
+  --background: rgb(32, 33, 36); 
+  --foreground: rgb(245, 245, 245);
+  --header-background: 
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
@@ -105,7 +108,7 @@
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
+  --accent: var(--charcoal);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
@@ -128,10 +131,12 @@
 }
 
 .dark {
-  --background: var(--charcoal);
-  --foreground: var(--ash-gray);
+  /* --background: var(--charcoal);
+  --foreground: var(--ash-gray); */
   /* --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0); */
+  --background: rgb(32, 33, 36); 
+  --foreground: rgb(245, 245, 245);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
