@@ -1,35 +1,39 @@
 "use client";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
-import LogoImage from 'public/light-temp-logo.png';
+import LogoImage from "public/light-temp-logo.png";
+//import Link from "next/link";
 
-const pages: string[] = [
-  "Home",
-  "About Me",
-  "Skills & Technologies",
-  "Projects",
-  "Contact Me",
+const pages: { label: string; slug: string }[] = [
+  { label: "Home", slug: "" },
+  { label: "About Me", slug: "about" },
+  { label: "Projects", slug: "projects" },
+  { label: "Contact Me", slug: "contact" },
 ];
 
-const navItems = pages.map((item) => (
-  <li className={styles.navItem} key={item}>
-    <a href="#">{item}</a>
-  </li>
-));
-
 export default function Header() {
+  const pathname = usePathname();
+
   return (
     <header className="h-[80px] bg-[var(--dark-slate-gray)] p-4 shadow-md">
       <div className="navbar flex flex-[1_1_auto] justify-between h-full mx-10 items-center">
         <a className="logo" href="#">
-          <Image
-            src={LogoImage}
-            height={50}
-            alt="Logo"
-          ></Image>
+          <Image src={LogoImage} height={50} alt="Logo"></Image>
         </a>
         <ul className="navList flex flex-[0_1_auto] gap-x-[2rem]">
-          {navItems}
+          {pages.map((item) => {
+            const isActive = pathname === `/${item.slug}`;
+
+            return (
+              <li
+                className={`${isActive ? styles.navItemActive : styles.navItem}`}
+                key={item.label}
+              >
+                <a href={item.slug ? item.slug : "/"}>{item.label}</a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </header>

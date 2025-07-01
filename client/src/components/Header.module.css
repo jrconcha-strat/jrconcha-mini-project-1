@@ -1,10 +1,5 @@
 
-.navItem:hover{
-  color: var(--hookers-green);
-  scale: 1.05;
-}
-
-.navItem:active{
+.navItem:active, .navItem:hover, .navItemActive{
   color: var(--hookers-green);
   scale: 1.05;
 }
@@ -34,4 +29,15 @@
 .navItem:hover::after{
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.navItemActive::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(1);
+  height: 2px;
+  background-color: var(--hookers-green);
 }
