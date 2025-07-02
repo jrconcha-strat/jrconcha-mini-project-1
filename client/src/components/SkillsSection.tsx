@@ -1,9 +1,15 @@
+"use client";
 import SkillPill from "@/components/ui/SkillPill";
+import { motion } from "framer-motion";
 
 export default function SkillsSection() {
   return (
-    <div
+    <motion.div
       id="skills-section"
+      initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        viewport={{ once: true, amount: 0.5 }}
       className="flex flex-auto flex-col items-center w-full py-8 sm:py-10 md:py-12 lg:py-16"
     >
       <p className="text-4xl mt-4"> Skills & Technologies</p>
@@ -49,6 +55,6 @@ export default function SkillsSection() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

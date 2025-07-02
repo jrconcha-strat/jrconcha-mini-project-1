@@ -1,12 +1,18 @@
+"use client";
 import Image from "next/image";
 import SkillPill from "./ui/SkillPill";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export default function ProjectsSection() {
   return (
-    <div
+    <motion.div
       id="projects-section"
+      initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        viewport={{ once: true, amount: 0.5 }}
       className="flex flex-auto flex-col items-center w-full py-8 sm:py-10 md:py-12 lg:py-16"
     >
       <p className="text-4xl mt-4"> Projects</p>
@@ -152,6 +158,6 @@ export default function ProjectsSection() {
           See More
         </Button>
       </Link>
-    </div>
+    </motion.div>
   );
 }
