@@ -20,9 +20,9 @@ export default function ProjectsSection() {
       <div className="flex flex-col gap-x-15 gap-y-10 mt-10 mx-10 lg:flex-row lg:gap-x-10">
         <div
           id="project-card"
-          className="rounded-2xl w-full max-w-[500px] bg-[var(--charcoal)] p-4 shadow hover:drop-shadow-[0_0_6px_var(--ash-gray)] transition-all duration-200"
+          className="rounded-2xl w-full max-w-[500px] bg-[var(--card-background)] p-4 shadow hover:drop-shadow-[0_0_6px_var(--foreground)] transition-all duration-200"
         >
-          <Image
+        <Image
             src="/analytiqa.png"
             width={500}
             height={200}
@@ -30,21 +30,21 @@ export default function ProjectsSection() {
             className="rounded-xl object-fill w-full h-[200px]"
           />
 
-          <p className="text-xl font-semibold mt-4 text-[var(--ash-gray)]">
+          <p className="text-xl font-semibold mt-4 text-[var(--foreground)]">
             Analytiqa
           </p>
 
-          <p className="mt-2 text-sm text-[var(--ash-gray)] opacity-70">
+          <p className="mt-2 text-sm text-[var(--foreground)] opacity-70">
             Analytiqa is a data report generator built with Django and Next.js
             that lets users turn CSV datasets into clean, interactive
             visualizations.
           </p>
 
-          <p className="mt-2 text-sm text-[var(--ash-gray)] opacity-70">
+          <p className="mt-2 text-sm text-[var(--foreground)] opacity-70">
             Deployed using PythonAnywhere and Vercel.
           </p>
           <Link href="https://analytiqa-report-generator.vercel.app/home">
-            <Button className="mt-4 bg-[var(--ash-gray)] text-[var(--background)]  hover:drop-shadow-[0_0_6px_var(--ash-gray)] hover:scale-105 transition-all duration-500]">
+            <Button className="mt-4 bg-[var(--foreground)] text-[var(--background)]  hover:drop-shadow-[0_0_6px_var(--foreground)] hover:scale-105 transition-all duration-500]">
               Visit
             </Button>
           </Link>
@@ -84,31 +84,31 @@ export default function ProjectsSection() {
         </div>
         <div
           id="project-card"
-          className="rounded-2xl w-full max-w-[500px] bg-[var(--charcoal)] p-4 shadow hover:drop-shadow-[0_0_6px_var(--ash-gray)] transition-all duration-200"
+          className="rounded-2xl w-full max-w-[500px] bg-[var(--card-background)] p-4 shadow hover:drop-shadow-[0_0_6px_var(--ash-gray)] transition-all duration-200"
         >
           <Image
-            src="/analytiqa.png"
+            src="/pawspromises.png"
             width={500}
             height={200}
-            alt="Landing page of Analytiqa website"
+            alt="Landing page of Paws and Promises website"
             className="rounded-xl object-fill w-full h-[200px]"
           />
 
-          <p className="text-xl font-semibold mt-4 text-[var(--ash-gray)]">
-            Analytiqa
+          <p className="text-xl font-semibold mt-4 text-[var(--foreground)]">
+            Paws and Promises
           </p>
 
-          <p className="mt-2 text-sm text-[var(--ash-gray)] opacity-70">
+          <p className="mt-2 text-sm text-[var(--foreground)] opacity-70">
             Analytiqa is a data report generator built with Django and Next.js
             that lets users turn CSV datasets into clean, interactive
             visualizations.
           </p>
 
-          <p className="mt-2 text-sm text-[var(--ash-gray)] opacity-70">
+          <p className="mt-2 text-sm text-[var(--foreground)] opacity-70">
             Deployed using PythonAnywhere and Vercel.
           </p>
-          <Link href="https://analytiqa-report-generator.vercel.app/home">
-            <Button className="mt-4 bg-[var(--ash-gray)] text-[var(--background)] hover:drop-shadow-[0_0_6px_var(--ash-gray)] hover:scale-105 transition-all duration-500]">
+          <Link href="https://paws-n-promises-2msa.vercel.app/home">
+            <Button className="mt-4 bg-[var(--foreground)] text-[var(--background)] hover:drop-shadow-[0_0_6px_var(--foreground)] hover:scale-105 transition-all duration-500]">
               Visit
             </Button>
           </Link>

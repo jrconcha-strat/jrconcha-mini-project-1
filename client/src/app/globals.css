@@ -4,23 +4,21 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background:  rgb(245, 245, 245);
-  --foreground: rgb(32, 33, 36); 
-
-  /* --background: var(--ash-gray);
-  --foreground: var(--charcoal); */
-
   --ash-gray: #cad2c5ff;
   --cambridge-blue: #84a98cff;
   --hookers-green: #52796fff;
   --dark-slate-gray: #354f52ff;
   --charcoal: #2f3e46ff;
   --radius: 0.625rem;
+
   /* --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0); */
+  /* --card: oklch(1 0 0); */
   --gradient-background: rgba(54,54,61,1);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --background:  rgb(245, 245, 245);
+  --foreground: rgb(32, 33, 36); 
+  --card-background: var(--cambridge-blue);
+  --card-foreground: var(--background);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
@@ -96,11 +94,13 @@
   --foreground: var(--ash-gray); */
   /* --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0); */
+  /* --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0); */
   --background: rgb(32, 33, 36); 
   --foreground: rgb(245, 245, 245);
-  --header-background: 
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
+  --card-background: var(--charcoal);
+  --card-foreground: var(--foreground);
+
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.922 0 0);
@@ -136,10 +136,12 @@
   --foreground: var(--ash-gray); */
   /* --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0); */
+  /* --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0); */
   --background: rgb(32, 33, 36); 
   --foreground: rgb(245, 245, 245);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
+  --card-background: var(--charcoal);
+  --card-foreground: var(--foreground);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.922 0 0);

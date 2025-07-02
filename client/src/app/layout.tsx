@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-
+import {ParticleLayerClient} from "components/ui/ParticlesBackground";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -22,6 +22,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
+
   return (
     <html lang="en">
       <head>
@@ -32,6 +34,8 @@ export default function RootLayout({
         className={`${montserrat.variable} antialiased`}
       >
         <Header></Header>
+        {/* Render only the Particles on Home Page */}
+        <ParticleLayerClient></ParticleLayerClient>
         <main className="flex-auto flex-col min-h-[100vh] px-6 md:px-12 lg:px-20 py-8">
           {children}
         </main>

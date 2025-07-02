@@ -1,6 +1,5 @@
 "use client";
 
-import ParticlesBackground from "@/components/ui/ParticlesBackground";
 import TypeWriter from "@/components/ui/TypeWriter";
 import { motion } from "framer-motion";
 
@@ -38,7 +37,6 @@ export default function Banner() {
         </div>
       </div>
 
-      <ParticlesBackground></ParticlesBackground>
     </div>
   );
 }

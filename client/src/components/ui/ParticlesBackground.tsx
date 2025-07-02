@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { usePathname } from 'next/navigation';
 import {
   type Container,
   type ISourceOptions,
@@ -15,9 +16,6 @@ export default function ParticlesBackground() {
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
       await loadSlim(engine);
     }).then(() => {
       setInit(true);
@@ -115,4 +113,10 @@ export default function ParticlesBackground() {
   }
 
   return <></>;
+}
+
+
+export function ParticleLayerClient() {
+  const pathname = usePathname();
+  return pathname === '/' ? <ParticlesBackground /> : null;
 }

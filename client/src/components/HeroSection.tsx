@@ -21,7 +21,7 @@ export default function HeroSection() {
           <Avatar className="w-50 h-50 lg:w-72 lg:h-72">
             <AvatarImage
               src="/picture.png"
-              className="w-full h-full rounded-full object-cover drop-shadow-[0_0_10px_var(--ash-gray)]"
+              className="w-full h-full rounded-full object-cover drop-shadow-[0_0_10px_var(--foreground)]"
             />
             <AvatarFallback>
               A smiling picture of Jhack in a formal outfit, slightly tilted
@@ -46,7 +46,7 @@ export default function HeroSection() {
             and let&apos;s make it happen.
           </p>
           <Link href="/contact" className="pt-4">
-            <Button className="hover:drop-shadow-[0_0_6px_var(--ash-gray)] hover:scale-105">
+            <Button className="hover:drop-shadow-[0_0_6px_var(--foreground)] hover:scale-105">
               {" "}
               Contact Me{" "}
             </Button>

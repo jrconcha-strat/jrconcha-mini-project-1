@@ -14,7 +14,7 @@ export default function SkillsSection() {
         more!{" "}
       </p>
       <div className="flex flex-col gap-y-10 md:flex-row md:gap-x-10 mt-10 mx-auto w-full">
-        <div className="flex-1 flex flex-col items-center px-6 py-4 outline-2 rounded-3xl bg-[var(--charcoal)] hover:drop-shadow-[0_0_3px_var(--ash-gray)] duration-150">
+        <div className="flex-1 flex flex-col items-center px-6 py-4 outline-2 rounded-3xl bg-[var(--card-background)] hover:drop-shadow-[0_0_3px_var(--foreground)] duration-150">
           <p className="text-2xl"> Frontend </p>
           <div className="flex flex-wrap gap-4 mt-6 justify-center">
             <SkillPill image="/css.png" name="CSS"></SkillPill>
@@ -25,7 +25,7 @@ export default function SkillsSection() {
             <SkillPill image="/flutter.png" name="Flutter"></SkillPill>
           </div>
         </div>
-        <div className="flex-1 flex flex-col items-center px-6 py-4 outline-2 rounded-3xl bg-[var(--charcoal)] hover:drop-shadow-[0_0_3px_var(--ash-gray)] duration-150">
+        <div className="flex-1 flex flex-col items-center px-6 py-4 outline-2 rounded-3xl bg-[var(--card-background)] hover:drop-shadow-[0_0_3px_var(--foreground)] duration-150">
           <p className="text-2xl"> Backend </p>
           <div className="flex flex-wrap gap-4 mt-6 justify-center">
             <SkillPill image="/node-js.png" name="Node.js"></SkillPill>
@@ -36,7 +36,7 @@ export default function SkillsSection() {
             <SkillPill image="/firebase.png" name="Firebase"></SkillPill>
           </div>
         </div>
-        <div className="flex-1 flex flex-col items-center px-6 py-4 outline-2 rounded-3xl bg-[var(--charcoal)] hover:drop-shadow-[0_0_3px_var(--ash-gray)] duration-150">
+        <div className="flex-1 flex flex-col items-center px-6 py-4 outline-2 rounded-3xl bg-[var(--card-background)] hover:drop-shadow-[0_0_3px_var(--foreground)] duration-150">
           <p className="text-2xl"> Others </p>
           <div className="flex flex-wrap gap-4 mt-6 justify-center">
             <SkillPill image="/figma.png" name="Figma"></SkillPill>
