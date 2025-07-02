@@ -108,7 +108,7 @@ export default function ProjectsSection() {
             Deployed using PythonAnywhere and Vercel.
           </p>
           <Link href="https://analytiqa-report-generator.vercel.app/home">
-            <Button className="mt-4 bg-[var(--ash-gray)] text-[var(--background)]  hover:drop-shadow-[0_0_6px_var(--ash-gray)] hover:scale-105 transition-all duration-500]">
+            <Button className="mt-4 bg-[var(--ash-gray)] text-[var(--background)] hover:drop-shadow-[0_0_6px_var(--ash-gray)] hover:scale-105 transition-all duration-500]">
               Visit
             </Button>
           </Link>
@@ -147,6 +147,11 @@ export default function ProjectsSection() {
           </div>
         </div>
       </div>
+      <Link href="/projects">
+        <Button className="mt-6 lg:mt-10 rounded-full outline-[var(--foreground)] outline-solid outline-1 text-[var(--foreground)] bg-[var(--background)] hover:bg-[var(--background)] hover:drop-shadow-[0_0_6px_var(--ash-gray)] hover:scale-105 transition-all duration-500">
+          See More
+        </Button>
+      </Link>
     </div>
   );
 }
