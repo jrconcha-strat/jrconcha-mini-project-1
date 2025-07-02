@@ -13,11 +13,11 @@ export default function Banner() {
         <TypeWriter
           duration={0}
           text="Your Shortcut to More Connections."
-          className="text-5xl"
+          className="text-3xl lg:text-5xl"
         ></TypeWriter>
         <div className="flex gap-x-1">
           <motion.span
-            className="pt-2"
+            className="pt-2 text-sm lg:text-base"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.7 }}
             transition={{ delay: 6, duration: 1 }}
@@ -26,7 +26,7 @@ export default function Banner() {
             Interested?{" "}
           </motion.span>
           <motion.span
-            className="pt-2"
+            className="pt-2 text-sm lg:text-base"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.7 }}
             transition={{ delay: 7, duration: 1 }}

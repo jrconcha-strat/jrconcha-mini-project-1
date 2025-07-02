@@ -12,8 +12,8 @@ export default function SkillsSection() {
         viewport={{ once: true, amount: 0.5 }}
       className="flex flex-auto flex-col items-center w-full py-8 sm:py-10 md:py-12 lg:py-16"
     >
-      <p className="text-4xl mt-4"> Skills & Technologies</p>
-      <p className="opacity-70 mt-4 text-center">
+      <p className="text-3xl lg:text-4xl mt-4"> Skills & Technologies</p>
+      <p className="opacity-70 mt-4 text-sm lg:text-base text-center">
         {" "}
         These are the languages, frameworks, and tools I&apos;ve worked with
         recently or had experience with — and I&apos;m always learning
@@ -21,7 +21,7 @@ export default function SkillsSection() {
       </p>
       <div className="flex flex-col gap-y-10 md:flex-row md:gap-x-10 mt-10 mx-auto w-full">
         <div className="flex-1 flex flex-col items-center px-6 py-4 outline-2 rounded-3xl bg-[var(--card-background)] hover:drop-shadow-[0_0_3px_var(--foreground)] duration-150">
-          <p className="text-2xl"> Frontend </p>
+          <p className="text-xl lg:text-2xl"> Frontend </p>
           <div className="flex flex-wrap gap-4 mt-6 justify-center">
             <SkillPill image="/css.png" name="CSS"></SkillPill>
             <SkillPill image="/html.png" name="HTML"></SkillPill>
@@ -32,7 +32,7 @@ export default function SkillsSection() {
           </div>
         </div>
         <div className="flex-1 flex flex-col items-center px-6 py-4 outline-2 rounded-3xl bg-[var(--card-background)] hover:drop-shadow-[0_0_3px_var(--foreground)] duration-150">
-          <p className="text-2xl"> Backend </p>
+          <p className="text-xl lg:text-2xl"> Backend </p>
           <div className="flex flex-wrap gap-4 mt-6 justify-center">
             <SkillPill image="/node-js.png" name="Node.js"></SkillPill>
             <SkillPill image="/express.png" name="Express.js"></SkillPill>
@@ -43,7 +43,7 @@ export default function SkillsSection() {
           </div>
         </div>
         <div className="flex-1 flex flex-col items-center px-6 py-4 outline-2 rounded-3xl bg-[var(--card-background)] hover:drop-shadow-[0_0_3px_var(--foreground)] duration-150">
-          <p className="text-2xl"> Others </p>
+          <p className="text-xl lg:text-2xl"> Others </p>
           <div className="flex flex-wrap gap-4 mt-6 justify-center">
             <SkillPill image="/figma.png" name="Figma"></SkillPill>
             <SkillPill image="/bruno.png" name="Bruno"></SkillPill>

@@ -30,17 +30,17 @@ export default function HeroSection() {
           </Avatar>
         </div>
         <div className="flex flex-col justify-center">
-          <p className="text-5xl"> Hi, I&apos;m Jhack </p>
-          <p className="opacity-70 pt-2">
+          <p className="text-3xl md:text-4xl lg:text-5xl"> Hi, I&apos;m Jhack </p>
+          <p className="opacity-70 text-sm md:text-base pt-2">
             {" "}
             Your friendly neighborhood Software Engineer from the Philippines!
           </p>
-          <p className="opacity-100 pt-6">
+          <p className="text-sm md:text-base lg:text-lg pt-6">
             {" "}
             I make stuff that works, probably looks good, and makes life a
             little easier.
           </p>
-          <p className="opacity-100">
+          <p className="text-sm md:text-base lg:text-lg">
             {" "}
             Got an idea you&apos;d like to bring to life? Click the button below
             and let&apos;s make it happen.

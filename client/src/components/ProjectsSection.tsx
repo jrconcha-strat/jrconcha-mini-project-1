@@ -15,8 +15,8 @@ export default function ProjectsSection() {
         viewport={{ once: true, amount: 0.5 }}
       className="flex flex-auto flex-col items-center w-full py-8 sm:py-10 md:py-12 lg:py-16"
     >
-      <p className="text-4xl mt-4"> Projects</p>
-      <p className="opacity-70 mt-4 text-center">
+      <p className="text-3xl lg:text-4xl mt-4"> Projects</p>
+      <p className="opacity-70 mt-4 text-sm lg:text-base text-center">
         {" "}
         Here are some of the projects I&apos;ve made. Each one reflects my
         journey as a developer — learning new tools, refining my skills, and
