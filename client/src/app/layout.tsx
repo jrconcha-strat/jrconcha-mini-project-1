@@ -32,7 +32,7 @@ export default function RootLayout({
         className={`${montserrat.variable} antialiased`}
       >
         <Header></Header>
-        <main className="flex-auto flex-col min-h-[100vh]">
+        <main className="flex-auto flex-col min-h-[100vh] px-6 md:px-12 lg:px-20 py-8">
           {children}
         </main>
 
