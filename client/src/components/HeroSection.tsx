@@ -18,7 +18,7 @@ export default function HeroSection() {
       >
         {" "}
         <div className="flex flex-col items-center justify-center">
-          <Avatar className="w-50 h-50 lg:w-72 lg:h-72">
+          <Avatar className="w-48 h-48 lg:w-72 lg:h-72">
             <AvatarImage
               src="/picture.png"
               className="w-full h-full rounded-full object-cover drop-shadow-[0_0_10px_var(--foreground)]"
