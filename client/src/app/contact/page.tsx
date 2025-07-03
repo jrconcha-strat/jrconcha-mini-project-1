@@ -71,7 +71,7 @@ export default function Contact() {
 
           <div>
             {/* Socials */}
-            <div className="flex flex-wrap gap-x-8 border-2 rounded-2xl w-full mt-5 max-w-[500px] min-w-[300px] p-4 self-start">
+            <div className="flex flex-wrap gap-x-8 border-2 rounded-2xl w-full mt-5 max-w-[700px] min-w-[300px] p-4 self-start">
               <p className="w-full mb-2 font-semibold"> My Socials:</p>
               <div>
                 <Link
@@ -127,17 +127,18 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Socials */}
-            <div className="flex flex-wrap gap-x-8 border-2 rounded-2xl w-full mt-5 max-w-[500px] min-w-[300px] p-4 self-start">
+            {/* Contact Information */}
+            <div className="flex flex-wrap gap-x-8 border-2 rounded-2xl w-full mt-5 max-w-[700px] min-w-[300px] p-4 self-start">
+              <p className="w-full mb-2 font-semibold"> Contact Information:</p>
               <div className="flex gap-2">
                 <FontAwesomeIcon size="xl" icon={faPhone} className="" />
-                <p className="w-full mb-2 font-medium"> Phone Number</p>
+                <p className="w-full mb-3 font-medium"> Phone Number</p>
               </div>
               <p className="pl-8 w-full mb-4"> 0926 652 9612</p>
 
               <div className="flex gap-2">
                 <FontAwesomeIcon size="xl" icon={faClock} className="" />
-                <p className="w-full mb-2 font-medium"> Working Hours</p>
+                <p className="w-full mb-3 font-medium"> Working Hours</p>
               </div>
               <p className="pl-8 w-full mb-4">
                 {" "}
@@ -146,7 +147,7 @@ export default function Contact() {
 
               <div className="flex gap-2">
                 <FontAwesomeIcon size="xl" icon={faLocation} className="" />
-                <p className="w-full mb-2 font-medium"> Location</p>
+                <p className="w-full mb-3 font-medium"> Location</p>
               </div>
 
               <p className="pl-8 w-full mb-4">
