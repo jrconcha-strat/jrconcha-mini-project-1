@@ -5,6 +5,10 @@ import {ParticleLayerClient} from "components/ui/ParticlesBackground";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
+
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
@@ -36,7 +40,7 @@ export default function RootLayout({
         <Header></Header>
         {/* Render only the Particles on Home Page */}
         <ParticleLayerClient></ParticleLayerClient>
-        <main className="flex-auto flex-col min-h-[100vh] px-6 md:px-12 lg:px-20 py-8">
+        <main className="flex-auto flex-col min-h-[100vh] px-6 md:px-12 lg:px-20 py-8 --font-">
           {children}
         </main>
 
