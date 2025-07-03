@@ -13,7 +13,7 @@ export default function Banner() {
         <TypeWriter
           duration={0}
           text="Your Shortcut to More Connections."
-          className="text-3xl lg:text-5xl"
+          className="text-3xl md:text-4xl lg:text-5xl"
         ></TypeWriter>
         <div className="flex gap-x-1">
           <motion.span
