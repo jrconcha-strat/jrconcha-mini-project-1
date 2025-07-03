@@ -29,11 +29,8 @@ export function DropDownNavMenu() {
   const pathname = usePathname();
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
-        <button className="bg-background rounded-full active:bg-[--hookers-green] w-[35px] h-[35px]">
-          {" "}
+      <DropdownMenuTrigger className="bg-background rounded-full active:bg-[--hookers-green] w-[35px] h-[35px]">
           <FontAwesomeIcon size="xl" icon={faBars} className="" />
-        </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="bg-background gap-2">
         {pages.map((item) => {
