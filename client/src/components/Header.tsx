@@ -1,26 +1,27 @@
 "use client";
 import Image from "next/image";
 import LogoImage from "public/light-temp-logo.png";
-import { usePathname } from "next/navigation";
+import NavigationMenuCaller from "./ui/NavigationMenuCaller";
+import { DropDownNavMenu } from "./ui/NavigationMenuCaller";
+
 import Link from "next/link";
-// import styles from "./Header.module.css";
-
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
-
-const pages: { label: string; slug: string }[] = [
-  { label: "Home", slug: "" },
-  { label: "About Me", slug: "about" },
-  { label: "Projects", slug: "projects" },
-  { label: "Contact Me", slug: "contact" },
-];
+import { useEffect, useState } from "react";
 
 export default function Header() {
-  const pathname = usePathname();
+  const [isDesktop, setDesktop] = useState(true);
+  const [isTablet, setTablet] = useState(true);
+  const [isMobile, setMobile] = useState(true);
+
+  useEffect(() => {
+    const updateMedia = () => {
+      setDesktop(window.innerWidth > 1024);
+      setTablet(window.innerWidth > 768 && window.innerWidth < 1024);
+      setMobile(window.innerWidth > 360 && window.innerWidth < 768);
+    };
+    updateMedia();
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
 
   return (
     <header className="h-[80px] bg-[var(--background)] filter brightness-115 px-6 md:px-12 lg:px-20 shadow-md sticky top-0 z-50">
@@ -33,54 +34,11 @@ export default function Header() {
             className="inline-block transition duration-300 hover:drop-shadow-[0_0_6px_var(--ash-gray)] min-w-[100px]"
           ></Image>
         </Link>
-        <NavigationMenu>
-          <NavigationMenuList>
-            {pages.map((item) => {
-              const isActive = pathname === `/${item.slug}`;
-              // console.log(`Current path: ${pathname} \nCurrent Item Slug : /${item.slug} \nEquality ${isActive}`);
-
-              return (
-                <NavigationMenuItem key={item.label}>
-                  <NavigationMenuLink
-                    href={item.slug ? item.slug : "/"}
-                    data-active={isActive === true ? "true" : "false"}
-                  >
-                    {item.label}
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              );
-            })}
-          </NavigationMenuList>
-        </NavigationMenu>
+        {(isTablet || isDesktop) && (
+          <NavigationMenuCaller></NavigationMenuCaller>
+        )}
+        {isMobile && <DropDownNavMenu></DropDownNavMenu>}
       </div>
     </header>
   );
 }
-
-// export default function Header() {
-//   const pathname = usePathname();
-
-//   return (
-//     <header className="h-[80px] bg-[var(--dark-slate-gray)] p-4 shadow-md">
-//       <div className="navbar flex flex-[1_1_auto] justify-between h-full mx-10 items-center">
-//         <a className="logo" href="#">
-//           <Image src={LogoImage} height={50} alt="Logo"></Image>
-//         </a>
-//         <ul className="navList flex flex-[0_1_auto] gap-x-[2rem]">
-//           {pages.map((item) => {
-//             const isActive = pathname === `/${item.slug}`;
-
-//             return (
-//               <li
-//                 className={`${isActive ? styles.navItemActive : styles.navItem}`}
-//                 key={item.label}
-//               >
-//                 <a href={item.slug ? item.slug : "/"}>{item.label}</a>
-//               </li>
-//             );
-//           })}
-//         </ul>
-//       </div>
-//     </header>
-//   );
-// }
