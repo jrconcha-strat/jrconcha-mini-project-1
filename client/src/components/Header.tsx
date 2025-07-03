@@ -8,9 +8,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Header() {
-  const [isDesktop, setDesktop] = useState(true);
-  const [isTablet, setTablet] = useState(true);
-  const [isMobile, setMobile] = useState(true);
+  const [isDesktop, setDesktop] = useState(false);
+  const [isTablet, setTablet] = useState(false);
+  const [isMobile, setMobile] = useState(false);
 
   useEffect(() => {
     const updateMedia = () => {
