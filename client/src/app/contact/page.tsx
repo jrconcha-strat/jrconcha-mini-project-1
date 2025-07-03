@@ -17,8 +17,8 @@ import {
 
 export default function Contact() {
   return (
-    <div className="h-full pb-8 sm:py-10 md:py-12 lg:py-16 flex flex-col items-center">
-      <div className="mt-10 w-full max-w-[1200px]">
+    <div className="h-full flex flex-col items-center">
+      <div className="w-full max-w-[1200px]">
         <p className="text-3xl lg:text-6xl mt-4 font-semibold">
           {" "}
           Let&apos;s start building.

@@ -6,7 +6,7 @@ import CertificationCard from "@/components/ui/CertificationCard";
 
 export default function About() {
   return (
-    <div className="h-full py-8 sm:py-10 md:py-12 lg:py-16 flex flex-col items-center">
+    <div className="h-full flex flex-col items-center">
       {/* Hero Section */}
       <motion.div
         className="flex-col lg:flex-row flex flex-1 gap-x-10 w-full max-w-[1200px] py-10"
