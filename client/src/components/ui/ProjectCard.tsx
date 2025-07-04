@@ -43,10 +43,10 @@ export default function ProjectCard({
           </Button>
         </Link>
         <Link href={`/projects/${projectSlug}`}>
-            <Button className="mt-4 bg-[var(--hookers-green)] text-[var(--foreground)] hover:bg-[var(--cambridge-blue)] hover:drop-shadow-[0_0_6px_var(--hookers-green)] hover:scale-105 transition-all duration-500]">
-              Read More
-            </Button>
-          </Link>
+          <Button className="mt-4 bg-[var(--hookers-green)] text-[var(--foreground)] hover:bg-[var(--cambridge-blue)] hover:drop-shadow-[0_0_6px_var(--hookers-green)] hover:scale-105 transition-all duration-500]">
+            Read More
+          </Button>
+        </Link>
       </div>
 
       <div className="flex flex-wrap gap-1 mt-10">
