@@ -52,7 +52,7 @@ export const projects: { [key: string]: ProjectProps } = {
     projectImages: ["/drs.png"],
     projectAlt: "Landing page of the Document Routing System Module",
     projectDesc:
-      "The DRS is a Laravel-based document tracking system that streamlines the routing and management of documents across university departments, integrating seamlessly with ERP modules to support both student and employee services.",
+      "An ERP-integrated module - document tracking system that streamlines the routing and management of documents across university departments.",
     projectDesc2: "Deployed using Hostinger.",
     projectTechs: ["Laravel", "MariaDB", "PHP", "HTML", "CSS"],
     projectLink: "",
@@ -95,7 +95,7 @@ export const projects: { [key: string]: ProjectProps } = {
     projectSlug: "project-v",
     projectRoles: ["Project Manager", "Developer", "Business Analyst"],
     projectExtendedDesc:
-      "roject Valdopena, or Project V, is a Flutter-based e-commerce mobile application built for Android that allows customers to conveniently browse and purchase a wide range of eye care products and solutions. I led the development of the app for an optical clinic, handling everything from gathering requirements to designing and implementing the user interface, user experience, and overall functionality. I also designed and structured the Firebase database schema and model using Cloud Firestore to ensure smooth data management and real-time syncing. This project showcases my expertise in Dart, Flutter, Firebase, Cloud Firestore, web hosting, and requirements gathering.",
+      "Project Valdopena, or Project V, is a Flutter-based e-commerce mobile application built for Android that allows customers to conveniently browse and purchase a wide range of eye care products and solutions. I led the development of the app for an optical clinic, handling everything from gathering requirements to designing and implementing the user interface, user experience, and overall functionality. I also designed and structured the Firebase database schema and model using Cloud Firestore to ensure smooth data management and real-time syncing. This project showcases my expertise in Dart, Flutter, Firebase, Cloud Firestore, web hosting, and requirements gathering.",
   },
   "stellarsynth-compiler": {
     projectTitle: "StellarSynth Compiler",
@@ -103,7 +103,7 @@ export const projects: { [key: string]: ProjectProps } = {
     projectAlt: "Landing page of the Document Routing System Module",
     projectDesc:
       "StellarSynth Compiler is a customized compiler utilizing a custom programming language based on C++ Syntax with some inspirations of Python.",
-    projectDesc2: "",
+    projectDesc2: "Covering the Lexical, Syntactical, Semantic and Code Generator phases.",
     projectTechs: ["Python", "CTKinter", "C++"],
     projectLink: "",
     projectSlug: "stellarsynth-compiler",
