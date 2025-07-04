@@ -34,13 +34,16 @@ export function DropDownNavMenu() {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="bg-background gap-2">
         {pages.map((item) => {
-          const isActive = pathname === `/${item.slug}`;
+          
+
+
+          const isActive = pathname.includes(`${item.slug}`);
           // console.log(`Current path: ${pathname} \nCurrent Item Slug : /${item.slug} \nEquality ${isActive}`);
 
           return (
             <DropdownMenuLabel key={item.label} className={`active:bg-[var(--hookers-green)] rounded-xs px-2 py-1 ${isActive ? "bg-[var(--hookers-green)] " : ""}`}>
               {" "}
-              <Link href={item.slug ? item.slug : "/"}>{item.label}</Link>
+              <Link href={item.slug ? `/${item.slug}` : "/"}>{item.label}</Link>
             </DropdownMenuLabel>
           );
         })}
@@ -55,13 +58,13 @@ export default function NavigationMenuCaller() {
     <NavigationMenu>
       <NavigationMenuList>
         {pages.map((item) => {
-          const isActive = pathname === `/${item.slug}`;
+          const isActive = pathname.includes(`${item.slug}`);
           // console.log(`Current path: ${pathname} \nCurrent Item Slug : /${item.slug} \nEquality ${isActive}`);
 
           return (
             <NavigationMenuItem key={item.label}>
               <NavigationMenuLink
-                href={item.slug ? item.slug : "/"}
+                href={item.slug ? `/${item.slug}` : "/"}
                 data-active={isActive === true ? "true" : "false"}
               >
                 {item.label}
