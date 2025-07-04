@@ -9,10 +9,10 @@ export default function ProjectsSection() {
   return (
     <motion.div
       id="projects-section"
-      // initial={{ opacity: 0 }}
-      //   whileInView={{ opacity: 1 }}
-      //   transition={{ duration: 2 }}
-      //   viewport={{ once: true, amount: 0.5 }}
+      initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        viewport={{ once: true, amount: 0.1 }}
       className="flex flex-auto flex-col items-center w-full py-8 sm:py-10 md:py-12 lg:py-16"
     >
       <p className="text-3xl lg:text-4xl mt-4"> Projects</p>
@@ -23,7 +23,7 @@ export default function ProjectsSection() {
         building things that I love.{" "}
       </p>
       {/* Projects Section */}
-      <div className="flex flex-wrap gap-x-5 gap-y-10 mt-10 lg:flex-row lg:gap-x-10">
+      <div className="flex h-full flex-wrap gap-x-5 gap-y-10 mt-10 lg:flex-row lg:gap-x-10">
         {Object.keys(projects).slice(0,2).map((projectKey) => (
           
           <ProjectCard key={projects[projectKey].projectTitle} {...projects[projectKey]} />
