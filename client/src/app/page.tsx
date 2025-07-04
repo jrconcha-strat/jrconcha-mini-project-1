@@ -6,7 +6,7 @@ import SkillsSection from "@/components/SkillsSection";
 
 export default function Home() {
   return (
-    <div id="home-content">
+    <div id="home-content" className="h-full flex flex-col items-center">
       <Banner></Banner>
       <HeroSection></HeroSection>
       <SkillsSection></SkillsSection>

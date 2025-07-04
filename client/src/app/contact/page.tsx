@@ -31,7 +31,7 @@ export default function Contact() {
 
         <div className="flex flex-col md:flex-row gap-5">
           {/* Form */}
-          <div className="border-2 rounded-2xl w-full mt-5 max-w-[700px] min-w-[300px]">
+          <div className="border-2 rounded-2xl w-full mt-5 max-w-[700px] min-w-[200px]">
             <form action="" method="post" className="flex flex-col p-4 gap-3">
               <label htmlFor="name">Name:</label>
               <input
@@ -59,19 +59,21 @@ export default function Contact() {
                 autoComplete="on"
                 className="bg-[var(--input)] text-foreground rounded-sm px-2 p-1 h-40 max-h-[300px]"
               ></textarea>
+              <div className="flex w-full justify-center">
               <Button
                 type="button"
-                className="hover:drop-shadow-[0_0_6px_var(--foreground)] active:drop-shadow-[0_0_6px_var(--foreground)] hover:scale-105 mt-5"
+                className="w-full lg:max-w-[200px] hover:drop-shadow-[0_0_6px_var(--foreground)] active:drop-shadow-[0_0_6px_var(--foreground)] hover:scale-105 mt-5"
               >
                 {" "}
                 Submit{" "}
               </Button>
+              </div>
             </form>
           </div>
 
           <div>
             {/* Socials */}
-            <div className="flex flex-wrap gap-x-8 border-2 rounded-2xl w-full mt-5 max-w-[700px] min-w-[300px] p-4 self-start">
+            <div className="flex flex-wrap gap-x-8 border-2 rounded-2xl w-full mt-5 max-w-[700px] min-w-[200px] p-4 self-start">
               <p className="w-full mb-2 font-semibold"> My Socials:</p>
               <div>
                 <Link
@@ -128,7 +130,7 @@ export default function Contact() {
             </div>
 
             {/* Contact Information */}
-            <div className="flex flex-wrap gap-x-8 border-2 rounded-2xl w-full mt-5 max-w-[700px] min-w-[300px] p-4 self-start">
+            <div className="flex flex-wrap gap-x-8 border-2 rounded-2xl w-full mt-5 max-w-[700px] min-w-[200px] p-4 self-start">
               <p className="w-full mb-2 font-semibold"> Contact Information:</p>
               <div className="flex gap-2">
                 <FontAwesomeIcon size="xl" icon={faPhone} className="" />

@@ -7,28 +7,33 @@ import CertificationCard from "@/components/ui/CertificationCard";
 export default function About() {
   return (
     <div className="h-full flex flex-col items-center">
-      {/* Hero Section */}
       <motion.div
-        className="flex-col lg:flex-row flex flex-1 gap-x-10 w-full max-w-[1200px] py-10"
+        className="w-full max-w-[1200px]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 2 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <div className="flex">
-          <div>
-            <Avatar>
-              <AvatarImage
-                src="/picture.png"
-                className="w-50 h-50 lg:w-80 lg:h-full rounded-2xl object-cover drop-shadow-[0_0_10px_var(--foreground)]"
-              />
-              <AvatarFallback>
-                A smiling picture of Jhack in a formal outfit, slightly tilted
-                towards the right.
-              </AvatarFallback>
-            </Avatar>
-          </div>
-        </div>
+        <p className="text-3xl lg:text-6xl mt-4 font-semibold">
+          {" "}
+          Some things about me.
+        </p>
+        <p className="opacity-70 mt-4 text-sm lg:text-base">
+          {" "}
+          Behind every line of code is a dive to curiosity. Here’s a quick look
+          into who I am, what I value, and what keeps me curious and passionate
+          about tech and development.{" "}
+        </p>
+      </motion.div>
+
+      {/* Hero Section */}
+      <motion.div
+        className="flex-col lg:flex-row flex flex-1 gap-x-10 w-full max-w-[1200px] mt-10"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        viewport={{ once: true, amount: 0.5 }}
+      >
 
         <div className="flex flex-col w-full">
           <div className="w-full relative text-center bg-[rgba(41,42,46,0.52)] border-l-8 p-4">
@@ -41,17 +46,33 @@ export default function About() {
             </blockquote>
           </div>
 
-          <p className="text-3xl md:text-4xl lg:text-5xl font-semibold mt-6">
+        <div className="flex justify-center mt-5 h-50 md:h-64 lg:h-80">
+          <Avatar className="w-50 h-50 md:w-64 md:h-64 lg:w-80 lg:h-80">
+            <AvatarImage
+              src="/picture.png"
+              className="w-50 h-50 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full object-cover drop-shadow-[0_0_10px_var(--foreground)]"
+            />
+            <AvatarFallback>
+              A smiling picture of Jhack in a formal outfit, slightly tilted to the right.
+            </AvatarFallback>
+          </Avatar>
+        </div>
+
+          <p className="text-2xl md:text-2xl lg:text-3xl font-semibold mt-6">
             {" "}
-            Hey, I&apos;m Jhack{" "}
+            Hey, I&apos;m Jhack!{" "}
           </p>
 
-          <p className="mt-5 w-full text-lg/7 text-justify">
+          <p className="mt-3 w-full text-sm text-justify">
             I&apos;m a Graduating Computer Science student at Pamantasan ng
             Lungsod ng Maynila with a deep curiosity for how things are built
             and how they can be improved. I enjoy solving problems through code,
             designing meaningful experiences, and continuously learning along
-            the way. Whether it&apos;s building websites or exploring new
+            the way.{" "}
+          </p>
+
+            <p className="mt-3 w-full text-sm text-justify">
+            Whether it&apos;s building websites or exploring new
             technologies, I&apos;m passionate about creating things that make an
             impact. Right now, I&apos;m focused on growing as a developer and
             looking for opportunities where I can contribute, learn, and build
@@ -61,7 +82,7 @@ export default function About() {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.7 }}
-            transition={{ duration: 2, delay:3 }}
+            transition={{ duration: 2, delay: 3 }}
             className="text-sm mt-3 text-right"
           >
             {" "}
@@ -73,11 +94,11 @@ export default function About() {
       {/* Experience section */}
 
       <motion.div
-        className="mt-10 w-full max-w-[1200px]"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 2 }}
-        viewport={{ once: true, amount: 0.5 }}
+        className="w-full max-w-[1200px] mt-10"
+        // initial={{ opacity: 0 }}
+        // whileInView={{ opacity: 1 }}
+        // transition={{ duration: 2 }}
+        // viewport={{ once: true, amount: 0.5 }}
       >
         <p className="text-3xl lg:text-4xl mt-4 font-semibold"> Experience</p>
         <p className="opacity-70 mt-4 text-sm lg:text-base">
@@ -87,7 +108,7 @@ export default function About() {
           of work I’m passionate about. Take a look at some of the roles that
           have shaped my journey so far.{" "}
         </p>
-        <div className="flex flex-wrap gap-10">
+        <div className="flex flex-wrap md:gap-5 lg:gap-10">
           <ExperienceCard
             image="/stratpoint.png"
             position="ReactJS Intern"
@@ -121,10 +142,10 @@ export default function About() {
       {/* Certifications section */}
       <motion.div
         className="mt-10 w-full max-w-[1200px]"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 2 }}
-        viewport={{ once: true, amount: 0.5 }}
+        // initial={{ opacity: 0 }}
+        // whileInView={{ opacity: 1 }}
+        // transition={{ duration: 2 }}
+        // viewport={{ once: true, amount: 0.5 }}
       >
         <p className="text-3xl lg:text-4xl mt-4 font-semibold">
           {" "}

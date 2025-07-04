@@ -16,7 +16,7 @@ export default function CertificationCard({
   desc,
 }: CertProps) {
   return (
-    <div className="flex flex-col flex-1/5 min-w-[300px] max-w-[300px] items-center border-2 rounded-2xl p-4">
+    <div className="flex flex-col w-full min-w-[200px] max-w-[300px] items-center border-2 rounded-2xl p-4">
       <div className="w-full flex justify-center">
         <Image
           src={image}
@@ -27,10 +27,10 @@ export default function CertificationCard({
         ></Image>
       </div>
 
-      <p className="font-medium text-xl mt-3 text-center"> {name}</p>
+      <p className="font-medium text-md md:text-xl mt-3 text-center"> {name}</p>
       <div className="flex w-full justify-between mt-1">
-        <p className="opacity-70"> {issuer} </p>
-        <p className="opacity-70"> {date}</p>
+        <p className="opacity-70 text-sm"> {issuer} </p>
+        <p className="opacity-70 text-sm"> {date}</p>
       </div>
       <p className="mt-4 text-sm text-center"> {desc}</p>
     </div>
