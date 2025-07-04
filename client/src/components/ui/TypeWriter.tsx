@@ -17,7 +17,7 @@ export default function TypeWriter({text, duration, className} : TypeWriterProps
       className={`text-center ${className ?? ""}`}
     >
       <Typewriter
-        options={{ loop: false}}
+        options={{ loop: false, delay:50}}
         onInit={(typewriter) => {
           typewriter.pauseFor(duration);
           typewriter.typeString(text).start();
