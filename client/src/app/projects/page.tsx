@@ -16,7 +16,7 @@ export default function Projects() {
           development using various modern technologies.{" "}
         </p>
         {/* Projects Section */}
-        <div className="flex flex-wrap gap-x-5 gap-y-10 mt-10 lg:flex-row">
+        <div className="flex flex-wrap gap-5 mt-10 lg:flex-row">
           {Object.keys(projects).map((projectKey) => (
             <ProjectCard
               key={projects[projectKey].projectTitle}
