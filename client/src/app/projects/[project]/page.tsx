@@ -59,21 +59,22 @@ export default function ProjectPage() {
         <div>
           <Carousel
             setApi={setApi}
-            className="flex grow-0 justify-center mt-10"
+            className="flex grow-1 justify-center mt-10"
           >
-            <CarouselContent>
+            <CarouselContent className="w-full ml-0">
               {projData.projectImages.map((element, index) => (
                 <CarouselItem
                   key={`${projData.projectSlug}-${index}`}
-                  className=""
+                  className="flex grow-1 h-[200px] w-[400px] md:h-[300px] md:w-[600px] lg:h-[400px] lg:w-[800px] relative max-w-[900px] border-2 rounded-sm"
                 >
                   <Image
-                    width={200}
-                    height={200}
                     src={element}
                     alt={element}
-                    className="object-cover rounded-sm w-full w-max-[300px]"
-                  ></Image>
+                    sizes="100vw"
+                    fill={true}
+                    style={{ objectFit: "cover", aspectRatio: 16/9}}
+                    className="rounded-sm"
+                  />
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -87,10 +88,10 @@ export default function ProjectPage() {
 
         {/* Content Body */}
         <div className="mt-5">
-          <p className="text-2xl font-semibold"> {projData.projectTitle}</p>
-          <p className="mt-3 text-sm"> {projData.projectExtendedDesc}</p>
+          <p className="text-2xl lg:text-3xl font-semibold"> {projData.projectTitle}</p>
+          <p className="mt-3 text-sm lg:text-base"> {projData.projectExtendedDesc}</p>
 
-          <p className="mt-6 font-semibold text-sm">
+          <p className="mt-6 font-semibold text-sm lg:text-xl">
             {" "}
             My Roles in this Project:
           </p>
@@ -100,19 +101,19 @@ export default function ProjectPage() {
                 key={element}
                 width={12}
                 height={12}
-                className="text-sm bg-[var(--cambridge-blue)]"
+                className="text-sm lg:text-base bg-[var(--cambridge-blue)]"
                 name={element}
               ></SkillPill>
             ))}
           </div>
-          <p className="mt-6 font-semibold text-sm"> Technologies Used:</p>
+          <p className="mt-6 font-semibold text-sm lg:text-xl"> Technologies Used:</p>
           <div className="flex flex-wrap gap-2 mt-2">
             {projData.projectTechs.map((element) => (
               <SkillPill
                 key={element}
                 width={12}
                 height={12}
-                className="text-sm bg-[var(--charcoal)]"
+                className="text-sm lg:text-base bg-[var(--charcoal)]"
                 name={element}
               ></SkillPill>
             ))}
