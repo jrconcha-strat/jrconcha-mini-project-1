@@ -18,7 +18,7 @@ export default function ProjectCard({
   return (
     <div
       id="project-card"
-      className="rounded-2xl w-full md:max-w-[320px] lg:max-w-[380px] bg-[var(--card-background)] p-4 shadow hover:drop-shadow-[0_0_6px_var(--foreground)] transition-all duration-200"
+      className="rounded-2xl h-full w-full md:max-w-[320px] lg:max-w-[380px] bg-[var(--card-background)] p-4 shadow hover:drop-shadow-[0_0_6px_var(--foreground)] transition-all duration-200"
     >
       <Image
         src={projectImages[0]}
