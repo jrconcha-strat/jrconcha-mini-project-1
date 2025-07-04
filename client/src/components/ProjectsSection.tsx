@@ -24,9 +24,9 @@ export default function ProjectsSection() {
       </p>
       {/* Projects Section */}
       <div className="flex flex-wrap gap-x-5 gap-y-10 mt-10 lg:flex-row lg:gap-x-10">
-
-        {projects.slice(0, 2).map((project) => (
-          <ProjectCard key={project.projectTitle} {...project} />
+        {Object.keys(projects).slice(0,2).map((projectKey) => (
+          
+          <ProjectCard key={projects[projectKey].projectTitle} {...projects[projectKey]} />
         ))}
 
       </div>
