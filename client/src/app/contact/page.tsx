@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -14,11 +15,17 @@ import {
   faSquareFacebook,
   faSquareInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
     <div className="h-full flex flex-col items-center">
-      <div className="w-full max-w-[1200px]">
+      <motion.div
+        className="w-full max-w-[1200px]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+      >
         <p className="text-3xl lg:text-6xl mt-4 font-semibold">
           {" "}
           Let&apos;s start building.
@@ -60,13 +67,13 @@ export default function Contact() {
                 className="bg-[var(--input)] text-foreground rounded-sm px-2 p-1 h-40 max-h-[300px]"
               ></textarea>
               <div className="flex w-full justify-center">
-              <Button
-                type="button"
-                className="w-full lg:max-w-[200px] hover:drop-shadow-[0_0_6px_var(--foreground)] active:drop-shadow-[0_0_6px_var(--foreground)] hover:scale-105 mt-5"
-              >
-                {" "}
-                Submit{" "}
-              </Button>
+                <Button
+                  type="button"
+                  className="w-full lg:max-w-[200px] hover:drop-shadow-[0_0_6px_var(--foreground)] active:drop-shadow-[0_0_6px_var(--foreground)] hover:scale-105 mt-5"
+                >
+                  {" "}
+                  Submit{" "}
+                </Button>
               </div>
             </form>
           </div>
@@ -134,15 +141,15 @@ export default function Contact() {
               <p className="w-full mb-2 font-semibold"> Contact Information:</p>
               <div className="flex gap-2">
                 <FontAwesomeIcon size="xl" icon={faPhone} className="" />
-                <p className="w-full mb-3 font-medium"> Phone Number</p>
+                <p className="w-full mb-3 font-medium "> Phone Number</p>
               </div>
-              <p className="pl-8 w-full mb-4"> 0926 652 9612</p>
+              <p className="pl-8 w-full mb-4 text-sm md:text-base"> 0926 652 9612</p>
 
               <div className="flex gap-2">
                 <FontAwesomeIcon size="xl" icon={faClock} className="" />
                 <p className="w-full mb-3 font-medium"> Working Hours</p>
               </div>
-              <p className="pl-8 w-full mb-4">
+              <p className="pl-8 w-full mb-4 text-sm md:text-base">
                 {" "}
                 Monday to Friday | 8:00 AM to 5:00 PM
               </p>
@@ -152,14 +159,14 @@ export default function Contact() {
                 <p className="w-full mb-3 font-medium"> Location</p>
               </div>
 
-              <p className="pl-8 w-full mb-4">
+              <p className="pl-8 w-full mb-4 text-sm md:text-base">
                 {" "}
                 1957 Firmeza St. Sampaloc Manila
               </p>
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

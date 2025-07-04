@@ -32,7 +32,7 @@ export default function About() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 2 }}
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.1 }}
       >
         <div className="flex flex-col w-full">
           <div className="w-full relative text-center bg-[rgba(41,42,46,0.52)] border-l-8 p-4">
@@ -95,10 +95,10 @@ export default function About() {
 
       <motion.div
         className="w-full max-w-[1200px] mt-10"
-        // initial={{ opacity: 0 }}
-        // whileInView={{ opacity: 1 }}
-        // transition={{ duration: 2 }}
-        // viewport={{ once: true, amount: 0.5 }}
+         initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        viewport={{ once: true, amount: 0.1 }}
       >
         <p className="text-3xl lg:text-4xl mt-4 font-semibold"> Experience</p>
         <p className="opacity-70 mt-4 text-sm lg:text-base">
@@ -142,10 +142,10 @@ export default function About() {
       {/* Certifications section */}
       <motion.div
         className="mt-10 w-full max-w-[1200px]"
-        // initial={{ opacity: 0 }}
-        // whileInView={{ opacity: 1 }}
-        // transition={{ duration: 2 }}
-        // viewport={{ once: true, amount: 0.5 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        viewport={{ once: true, amount: 0.1 }}
       >
         <p className="text-3xl lg:text-4xl mt-4 font-semibold">
           {" "}

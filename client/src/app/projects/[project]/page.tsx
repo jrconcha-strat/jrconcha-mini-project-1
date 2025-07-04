@@ -14,6 +14,7 @@ import { type CarouselApi } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import SkillPill from "@/components/ui/SkillPill";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export default function ProjectPage() {
   const params = useParams();
@@ -39,7 +40,10 @@ export default function ProjectPage() {
 
   return (
     <div className="h-full flex flex-col items-center">
-      <div className="w-full max-w-[1200px]">
+      <motion.div className="w-full max-w-[1200px]" initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 2 }}
+              viewport={{ once: true, amount: 0.1 }} >
         {/* Breadcrumbs */}
         <div className="flex gap-x-2">
           <Link
@@ -146,7 +150,7 @@ export default function ProjectPage() {
             </div>
           </div>
         )}
-      </div>
+      </motion.div>
     </div>
   );
 }

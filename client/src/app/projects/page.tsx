@@ -1,14 +1,17 @@
-// import { Button } from "@/components/ui/button";
-// import SkillPill from "@/components/ui/SkillPill";
-// import Link from "next/link";
-// import Image from "next/image";
+"use client";
 import ProjectCard from "@/components/ui/ProjectCard";
 import { projects } from "./data";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
     <div className="h-full flex flex-col items-center">
-      <div className="w-full max-w-[1200px]">
+      <motion.div
+        className="w-full max-w-[1200px]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+      >
         <p className="text-3xl lg:text-6xl mt-4 font-semibold">My Projects.</p>
         <p className="opacity-70 mt-4 text-sm lg:text-base">
           {" "}
@@ -18,13 +21,18 @@ export default function Projects() {
         {/* Projects Section */}
         <div className="flex flex-wrap gap-5 mt-10 lg:flex-row">
           {Object.keys(projects).map((projectKey) => (
-            <ProjectCard
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 2 }}
+              viewport={{ once: true, amount: 0.1 }}
               key={projects[projectKey].projectTitle}
-              {...projects[projectKey]}
-            />
+            >
+              <ProjectCard {...projects[projectKey]} />
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
