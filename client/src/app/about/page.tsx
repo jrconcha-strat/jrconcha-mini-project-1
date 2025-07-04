@@ -12,7 +12,7 @@ export default function About() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 2 }}
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.1 }}
       >
         <p className="text-3xl lg:text-6xl mt-4 font-semibold">
           {" "}
@@ -34,7 +34,6 @@ export default function About() {
         transition={{ duration: 2 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-
         <div className="flex flex-col w-full">
           <div className="w-full relative text-center bg-[rgba(41,42,46,0.52)] border-l-8 p-4">
             <span className="text-5xl lg:text-8xl text-[var(--cambridge-blue)] top-1 left-2 lg:left-5 absolute font-serif">
@@ -46,24 +45,25 @@ export default function About() {
             </blockquote>
           </div>
 
-        <div className="flex justify-center mt-5 h-50 md:h-64 lg:h-80">
-          <Avatar className="w-50 h-50 md:w-64 md:h-64 lg:w-80 lg:h-80">
-            <AvatarImage
-              src="/picture.png"
-              className="w-50 h-50 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full object-cover drop-shadow-[0_0_10px_var(--foreground)]"
-            />
-            <AvatarFallback>
-              A smiling picture of Jhack in a formal outfit, slightly tilted to the right.
-            </AvatarFallback>
-          </Avatar>
-        </div>
+          <div className="flex justify-center mt-5 h-50 md:h-64 lg:h-80">
+            <Avatar className="w-50 h-50 md:w-64 md:h-64 lg:w-80 lg:h-80">
+              <AvatarImage
+                src="/picture.png"
+                className="w-50 h-50 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full object-cover drop-shadow-[0_0_10px_var(--foreground)]"
+              />
+              <AvatarFallback>
+                A smiling picture of Jhack in a formal outfit, slightly tilted
+                to the right.
+              </AvatarFallback>
+            </Avatar>
+          </div>
 
           <p className="text-2xl md:text-2xl lg:text-3xl font-semibold mt-6">
             {" "}
             Hey, I&apos;m Jhack!{" "}
           </p>
 
-          <p className="mt-3 w-full text-sm text-justify">
+          <p className="mt-3 w-full text-sm lg:text-base text-justify">
             I&apos;m a Graduating Computer Science student at Pamantasan ng
             Lungsod ng Maynila with a deep curiosity for how things are built
             and how they can be improved. I enjoy solving problems through code,
@@ -71,12 +71,12 @@ export default function About() {
             the way.{" "}
           </p>
 
-            <p className="mt-3 w-full text-sm text-justify">
-            Whether it&apos;s building websites or exploring new
-            technologies, I&apos;m passionate about creating things that make an
-            impact. Right now, I&apos;m focused on growing as a developer and
-            looking for opportunities where I can contribute, learn, and build
-            something great.{" "}
+          <p className="mt-3 w-full text-sm lg:text-base text-justify">
+            Whether it&apos;s building websites or exploring new technologies,
+            I&apos;m passionate about creating things that make an impact. Right
+            now, I&apos;m focused on growing as a developer and looking for
+            opportunities where I can contribute, learn, and build something
+            great.{" "}
           </p>
 
           <motion.p
