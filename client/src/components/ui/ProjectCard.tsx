@@ -7,7 +7,7 @@ import type { ProjectProps } from "@/app/projects/data";
 
 export default function ProjectCard({
   projectTitle,
-  projectImage,
+  projectImages,
   projectDesc,
   projectDesc2,
   projectAlt,
@@ -21,7 +21,7 @@ export default function ProjectCard({
       className="rounded-2xl w-full md:max-w-[320px] lg:max-w-[380px] bg-[var(--card-background)] p-4 shadow hover:drop-shadow-[0_0_6px_var(--foreground)] transition-all duration-200"
     >
       <Image
-        src={projectImage}
+        src={projectImages[0]}
         width={500}
         height={200}
         alt={projectAlt}

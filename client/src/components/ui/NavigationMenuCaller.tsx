@@ -38,7 +38,7 @@ export function DropDownNavMenu() {
 
 
           const isActive = pathname.includes(`${item.slug}`);
-          // console.log(`Current path: ${pathname} \nCurrent Item Slug : /${item.slug} \nEquality ${isActive}`);
+          console.log(`Current path: ${pathname} \nCurrent Item Slug : /${item.slug} \nEquality ${isActive}`);
 
           return (
             <DropdownMenuLabel key={item.label} className={`active:bg-[var(--hookers-green)] rounded-xs px-2 py-1 ${isActive ? "bg-[var(--hookers-green)] " : ""}`}>
