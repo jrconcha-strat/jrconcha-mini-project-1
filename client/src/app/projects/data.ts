@@ -19,7 +19,7 @@ export const projects: { [key: string]: ProjectProps } = {
     projectImages: ["/analytiqa.png", "/analytiqa2.jpg", "/analytiqa3.jpg", "/analytiqa4.jpg", "/analytiqa5.jpg"],
     projectAlt: "Landing page of Analytiqa website",
     projectDesc:
-      "Analytiqa is a data report generator built with Django and Next.js that lets users turn CSV datasets into clean, interactive visualizations.",
+      "Analytiqa is a data report generator built with Django and Next.js that lets users turn CSV datasets into clean, interactive visualizations with the help of AI.",
     projectDesc2: "Deployed using PythonAnywhere and Vercel.",
     projectTechs: ["Next.js", "Django", "MariaDB", "Vercel", "Pythonanywhere"],
     projectLink: "https://analytiqa-report-generator.vercel.app/home",
