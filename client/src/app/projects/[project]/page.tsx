@@ -13,7 +13,7 @@ import Image from "next/image";
 import { type CarouselApi } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import SkillPill from "@/components/ui/SkillPill";
-// import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 export default function ProjectPage() {
   const params = useParams();
@@ -72,7 +72,7 @@ export default function ProjectPage() {
                     alt={element}
                     sizes="100vw"
                     fill={true}
-                    style={{ objectFit: "cover", aspectRatio: 16/9}}
+                    style={{ objectFit: "cover", aspectRatio: 16 / 9 }}
                     className="rounded-sm"
                   />
                 </CarouselItem>
@@ -88,8 +88,14 @@ export default function ProjectPage() {
 
         {/* Content Body */}
         <div className="mt-5">
-          <p className="text-2xl lg:text-3xl font-semibold"> {projData.projectTitle}</p>
-          <p className="mt-3 text-sm lg:text-base"> {projData.projectExtendedDesc}</p>
+          <p className="text-2xl lg:text-3xl font-semibold">
+            {" "}
+            {projData.projectTitle}
+          </p>
+          <p className="mt-3 text-sm lg:text-base">
+            {" "}
+            {projData.projectExtendedDesc}
+          </p>
 
           <p className="mt-6 font-semibold text-sm lg:text-xl">
             {" "}
@@ -106,7 +112,10 @@ export default function ProjectPage() {
               ></SkillPill>
             ))}
           </div>
-          <p className="mt-6 font-semibold text-sm lg:text-xl"> Technologies Used:</p>
+          <p className="mt-6 font-semibold text-sm lg:text-xl">
+            {" "}
+            Technologies Used:
+          </p>
           <div className="flex flex-wrap gap-2 mt-2">
             {projData.projectTechs.map((element) => (
               <SkillPill
@@ -120,20 +129,23 @@ export default function ProjectPage() {
           </div>
         </div>
         {/* Call to Action */}
-        {/* <div className="flex justify-center">
-          {projData.projectLink === "" ? (
-            <Button
-              disabled={true}
-              className="mt-4 w-full bg-[var(--foreground)] text-[var(--background)]  hover:drop-shadow-[0_0_6px_var(--foreground)] hover:scale-105 transition-all duration-500]"
-            >
-              Check it out!
-            </Button>
-          ) : (
-            <Button className="mt-4 w-full md:max-w-[150px] bg-[var(--foreground)] text-[var(--background)]  hover:drop-shadow-[0_0_6px_var(--foreground)] hover:scale-105 transition-all duration-500]">
-              Check it out!
-            </Button>
-          )}
-        </div> */}
+        {projData.projectLink === "" ? <></>: (
+          <div className="flex mt-10 w-full bg-[url(/cta.jpg)] bg-cover rounded-sm px-4 py-8 md:px-8">
+            <div className="flex flex-col grow-1">
+              <p className="font-semibold text-2xl md:text-3xl">
+                See for Yourself{" "}
+              </p>
+              <p className="text-base opacity-70 md:text-xl">
+                Don&apos;t let me stop you.
+              </p>
+              <div>
+                <Button className="mt-4 p-2 text-xs md:text-sm w-full md:max-w-[150px] bg-[var(--foreground)] text-[var(--background)]  drop-shadow-[0_0_6px_var(--foreground)] hover:scale-105 transition-all duration-500]">
+                  Check it out!
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
