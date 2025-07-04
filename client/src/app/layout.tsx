@@ -29,13 +29,13 @@ export default function RootLayout({
   
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${montserrat.className} antialiased`}>
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body
-        className={`${montserrat.variable} antialiased`}
+        
       >
         <Header></Header>
         {/* Render only the Particles on Home Page */}
