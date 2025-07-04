@@ -20,7 +20,7 @@ export default function Banner() {
             className="pt-2 text-sm lg:text-base"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.7 }}
-            transition={{ delay: 6, duration: 1 }}
+            transition={{ delay: 3, duration: 1 }}
           >
             {" "}
             Interested?{" "}
@@ -29,7 +29,7 @@ export default function Banner() {
             className="pt-2 text-sm lg:text-base"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.7 }}
-            transition={{ delay: 7, duration: 1 }}
+            transition={{ delay: 4, duration: 1 }}
           >
             {" "}
             Scroll Down to Learn More.{" "}
