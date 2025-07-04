@@ -48,8 +48,9 @@ export default function About() {
           <div className="flex justify-center mt-5 h-50 md:h-64 lg:h-80">
             <Avatar className="w-50 h-50 md:w-64 md:h-64 lg:w-80 lg:h-80">
               <AvatarImage
-                src="/picture.png"
-                className="w-50 h-50 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full object-cover drop-shadow-[0_0_10px_var(--foreground)]"
+              
+                src="/jhack2.jpg"
+                className="object-top w-50 h-50 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full object-cover drop-shadow-[0_0_10px_var(--foreground)]"
               />
               <AvatarFallback>
                 A smiling picture of Jhack in a formal outfit, slightly tilted
