@@ -97,6 +97,7 @@
   /* --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0); */
   --input-background: rgb(47, 48, 53); 
+  --toast-background: rgb(47, 48, 53); 
   --background: rgb(32, 33, 36); 
   --foreground: rgb(245, 245, 245);
   --card-background: var(--charcoal);
@@ -139,6 +140,7 @@
   /* --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0); */
   --input-background: rgb(47, 48, 53); 
+  --toast-background: rgb(47, 48, 53); 
   --background: rgb(32, 33, 36); 
   --foreground: rgb(245, 245, 245);
   --card-background: var(--charcoal);

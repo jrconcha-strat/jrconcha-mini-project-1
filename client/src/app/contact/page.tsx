@@ -17,7 +17,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-
+import { toast } from "sonner";
+import { Toaster } from "sonner";
+import Image from 'next/image';
 
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -30,14 +32,36 @@ export default function Contact() {
 
     if (form.checkValidity()) {
       console.log("Form Valid");
-      form.submit(); // Replace this with a post call.
+      //form.submit(); // Replace this with a post call.
+      toast.success("Form Submission Successful", {
+        description: "I got your message! Thanks.",
+        action: { label: "Dismiss", onClick: () => {} },
+      });
     } else {
       form.reportValidity();
+        toast.error("Form Submission Unsuccessful", {
+        description: "Kindly double check your inputs.",
+        action: { label: "Dismiss", onClick: () => {} },
+      });
     }
   };
 
   return (
     <div className="h-full flex flex-col items-center">
+      <Toaster
+        icons={{
+          success: <Image width={32} height={32} alt="Check Icon" src="/check.png"></Image>,
+          error: <Image width={32} height={32} alt="Error Icon" src="/error.png"></Image>,
+        }}
+        toastOptions={{
+          classNames: {
+            toast: "!bg-[var(--toast-background)] !border-[var(--sidebar-ring)]",
+            title: "!text-[var(--foreground)]",
+            description: "!text-[var(--foreground)]",
+            actionButton: "!bg-[var(--foreground)] !text-[var(--background)]",
+          },
+        }}
+      />
       <motion.div
         className="w-full max-w-[1200px]"
         initial={{ opacity: 0 }}
@@ -57,7 +81,12 @@ export default function Contact() {
         <div className="flex flex-col md:flex-row gap-5 lg:items-center mt-5">
           {/* Form */}
           <div className="border-2 rounded-2xl w-full max-w-[700px] min-w-[200px]">
-            <form ref={formRef} action="" method="post" className="flex flex-col p-4 gap-3">
+            <form
+              ref={formRef}
+              action=""
+              method="post"
+              className="flex flex-col p-4 gap-3"
+            >
               <div className="flex gap-2">
                 <span className="text-base text-[var(--destructive)]">*</span>{" "}
                 <p className="text-sm opacity-70">Indicates a required field</p>
@@ -73,7 +102,7 @@ export default function Contact() {
                 id="name"
                 autoComplete="off"
                 placeholder="Your Name"
-                className="bg-[var(--input)] text-foreground rounded-sm px-2 p-1 invalid:border-1 invalid:border-[var(--destructive)]"
+                className="bg-[var(--input)] text-foreground rounded-sm px-2 p-1 border-0 invalid:border-1 invalid:border-[var(--destructive)]"
                 required={true}
               />
               <label htmlFor="address">
@@ -180,7 +209,10 @@ export default function Contact() {
 
             {/* Contact Information */}
             <div className="flex flex-wrap gap-x-8 border-2 rounded-2xl w-full mt-3 max-w-[700px] min-w-[200px] p-4 self-start">
-              <p className="w-full mb-2  font-semibold"> Contact Information:</p>
+              <p className="w-full mb-2  font-semibold">
+                {" "}
+                Contact Information:
+              </p>
               <div className="flex gap-2">
                 <FontAwesomeIcon size="xl" icon={faPhone} className="" />
                 <p className="w-full mb-3 font-medium "> Phone Number</p>
