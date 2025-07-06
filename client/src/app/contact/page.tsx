@@ -102,7 +102,7 @@ export default function Contact() {
                 id="name"
                 autoComplete="off"
                 placeholder="Your Name"
-                className="bg-[var(--input)] text-foreground rounded-sm px-2 p-1 border-0 invalid:border-1 invalid:border-[var(--destructive)]"
+                className="bg-[var(--input)] text-foreground rounded-sm px-2 p-1 border-0"
                 required={true}
               />
               <label htmlFor="address">
@@ -115,7 +115,7 @@ export default function Contact() {
                 id="address"
                 autoComplete="off"
                 placeholder="Your Email"
-                className="bg-[var(--input)] text-foreground rounded-sm px-2 p-1 invalid:border-1 invalid:border-[var(--destructive)]"
+                className="bg-[var(--input)] text-foreground rounded-sm px-2 p-1"
                 required={true}
               />
               <label htmlFor="message">
@@ -127,7 +127,7 @@ export default function Contact() {
                 id="message"
                 placeholder="Type your message here."
                 autoComplete="on"
-                className="bg-[var(--input)] text-foreground rounded-sm px-2 p-1 h-40 max-h-[300px] invalid:border-1 invalid:border-[var(--destructive)]"
+                className="bg-[var(--input)] text-foreground rounded-sm px-2 p-1 h-40 max-h-[300px]"
                 required={true}
                 maxLength={400}
               ></textarea>
