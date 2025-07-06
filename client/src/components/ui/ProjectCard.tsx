@@ -37,16 +37,20 @@ export default function ProjectCard({
       <p className="mt-2 text-sm text-[var(--foreground)]">{projectDesc2}</p>
 
       <div className="flex justify-between">
-        <Link href={projectLink}>
-          <Button className="mt-4 bg-[var(--foreground)] text-[var(--background)]  hover:drop-shadow-[0_0_6px_var(--foreground)] hover:scale-105 transition-all duration-500]">
-            Visit
-          </Button>
-        </Link>
         <Link href={`/projects/${projectSlug}`}>
           <Button className="mt-4 bg-[var(--hookers-green)] text-[var(--foreground)] hover:bg-[var(--cambridge-blue)] hover:drop-shadow-[0_0_6px_var(--hookers-green)] hover:scale-105 transition-all duration-500]">
             Read More
           </Button>
         </Link>
+        {projectLink ? (
+          <Link href={projectLink}>
+            <Button className="mt-4 bg-[var(--foreground)] text-[var(--background)]  hover:drop-shadow-[0_0_6px_var(--foreground)] hover:scale-105 transition-all duration-500]">
+              Visit
+            </Button>
+          </Link>
+        ) : (
+          <></>
+        )}
       </div>
 
       <div className="flex flex-wrap gap-1 mt-10">
