@@ -16,8 +16,26 @@ import {
   faSquareInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
+import { useRef } from "react";
+
 
 export default function Contact() {
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const form = formRef.current;
+    if (!form) return;
+
+    if (form.checkValidity()) {
+      console.log("Form Valid");
+      form.submit(); // Replace this with a post call.
+    } else {
+      form.reportValidity();
+    }
+  };
+
   return (
     <div className="h-full flex flex-col items-center">
       <motion.div
@@ -39,7 +57,7 @@ export default function Contact() {
         <div className="flex flex-col md:flex-row gap-5 lg:items-center mt-5">
           {/* Form */}
           <div className="border-2 rounded-2xl w-full max-w-[700px] min-w-[200px]">
-            <form action="" method="post" className="flex flex-col p-4 gap-3">
+            <form ref={formRef} action="" method="post" className="flex flex-col p-4 gap-3">
               <div className="flex gap-2">
                 <span className="text-base text-[var(--destructive)]">*</span>{" "}
                 <p className="text-sm opacity-70">Indicates a required field</p>
@@ -55,7 +73,7 @@ export default function Contact() {
                 id="name"
                 autoComplete="off"
                 placeholder="Your Name"
-                className="bg-[var(--input)] text-foreground rounded-sm px-2 p-1"
+                className="bg-[var(--input)] text-foreground rounded-sm px-2 p-1 invalid:border-1 invalid:border-[var(--destructive)]"
                 required={true}
               />
               <label htmlFor="address">
@@ -68,7 +86,7 @@ export default function Contact() {
                 id="address"
                 autoComplete="off"
                 placeholder="Your Email"
-                className="bg-[var(--input)] text-foreground rounded-sm px-2 p-1"
+                className="bg-[var(--input)] text-foreground rounded-sm px-2 p-1 invalid:border-1 invalid:border-[var(--destructive)]"
                 required={true}
               />
               <label htmlFor="message">
@@ -80,13 +98,14 @@ export default function Contact() {
                 id="message"
                 placeholder="Type your message here."
                 autoComplete="on"
-                className="bg-[var(--input)] text-foreground rounded-sm px-2 p-1 h-40 max-h-[300px]"
+                className="bg-[var(--input)] text-foreground rounded-sm px-2 p-1 h-40 max-h-[300px] invalid:border-1 invalid:border-[var(--destructive)]"
                 required={true}
                 maxLength={400}
               ></textarea>
               <div className="flex w-full justify-center">
                 <Button
                   type="submit"
+                  onClick={handleSubmit}
                   className="w-full lg:max-w-[200px] hover:drop-shadow-[0_0_6px_var(--foreground)] active:drop-shadow-[0_0_6px_var(--foreground)] hover:scale-105 mt-5"
                 >
                   {" "}
