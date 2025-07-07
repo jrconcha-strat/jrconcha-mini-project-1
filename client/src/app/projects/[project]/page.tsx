@@ -40,10 +40,13 @@ export default function ProjectPage() {
 
   return (
     <div className="h-full flex flex-col items-center">
-      <motion.div className="w-full max-w-[1200px]" initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 2 }}
-              viewport={{ once: true, amount: 0.1 }} >
+      <motion.div
+        className="w-full max-w-[1200px]"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        viewport={{ once: true, amount: 0.1 }}
+      >
         {/* Breadcrumbs */}
         <div className="flex gap-x-2">
           <Link
@@ -133,7 +136,9 @@ export default function ProjectPage() {
           </div>
         </div>
         {/* Call to Action */}
-        {projData.projectLink === "" ? <></>: (
+        {projData.projectLink === "" ? (
+          <></>
+        ) : (
           <div className="flex mt-10 w-full bg-[url(/cta.jpg)] bg-cover rounded-sm px-4 py-8 md:px-8">
             <div className="flex flex-col grow-1">
               <p className="font-semibold text-2xl md:text-3xl">
@@ -143,9 +148,11 @@ export default function ProjectPage() {
                 Don&apos;t let me stop you.
               </p>
               <div>
-                <Button className="mt-4 p-2 text-xs md:text-sm w-full md:max-w-[150px] bg-[var(--foreground)] text-[var(--background)]  drop-shadow-[0_0_6px_var(--foreground)] hover:scale-105 transition-all duration-500]">
-                  Check it out!
-                </Button>
+                <Link href={projData.projectLink}>
+                  <Button className="mt-4 p-2 text-xs md:text-sm w-full md:max-w-[150px] bg-[var(--foreground)] text-[var(--background)]  drop-shadow-[0_0_6px_var(--foreground)] hover:scale-105 transition-all duration-500]">
+                    Check it out!
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
